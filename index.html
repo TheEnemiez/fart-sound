@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>You're gae</title>
+</head>
+
+<body>
+    <button id="play-btn">Don't Click Me</button>
+    <audio id="audio" src="sound.mp3"></audio>
+
+    <script>
+        const playButton = document.getElementById("play-btn");
+        const audioElement = document.getElementById("audio");
+
+        playButton.addEventListener("click", () => {
+            audioElement.play().catch((error) => console.error("Error playing sound:", error));
+        });
+    </script>
+</body>
+
+</html>
